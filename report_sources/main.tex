@@ -470,6 +470,25 @@
 
 Вычислить значение функции $Y = \arccos (\frac{A}{B} - B) - \frac{B}{2} \cdot \lg (A^2 + B^2)$ при $A = 5$ и $B = 2.35$. Использовать два варианта исходных данных и вывода результатов: возможности библиотеки функций языка C и библиотеки классов языка C++.
 
+\section{Перечень блок-схем}
+
+На рисунках ниже приведены блок-схемы используемых в программе алгоритмов (\ref{alg:main}).
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    start chain=going below,
+    node distance=6mm and 60mm,
+]
+    \node [block] (start) {Начало main()};
+    \node [io, join] (input) {Ввод A, B};
+    \node [base, join] (calc) {$Y = \arccos (\frac{A}{B} - B) - \frac{B}{2} \cdot \lg (A^2 + B^2)$};
+    \node [io, join] (output) {Вывод $Y$};
+    \node [block, join] (finish) {Конец main()};
+\end{tikzpicture}
+\caption{Алгоритм функции \mintinline{cpp}{int main()}\label{alg:main}}
+\end{figure}
+
 \section{Ход работы}
 
 В листинге ниже приведен код разработанной программы (\ref{lst:main}):
